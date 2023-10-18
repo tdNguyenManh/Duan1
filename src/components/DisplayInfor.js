@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './DisplayInfor.scss';
 class DisplayInfor extends React.Component {
     constructor(props) {
         super(props);
@@ -15,10 +15,13 @@ class DisplayInfor extends React.Component {
     }
 
     render() {
+       
         const { listUsers } = this.props;
 
         return (
+            <div className='display-infor-conatiner'>
             <div>
+                 
                 <div>
                     <span onClick={this.handleShowHide}>
                         {this.state.isShowListUser ? "Hide list users:" : "Show list users:"}
@@ -31,6 +34,7 @@ class DisplayInfor extends React.Component {
                         <hr />
                     </div>
                 ))}
+            </div>
             </div>
         );
     }
